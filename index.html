@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Relógio</title>
+  </head>
+  <body>
+    <h1>Relógio digital</h1>
+    <!-- Esse elemento será usado para mostrar as horas -->
+    <span id="relogio"></span>
+
+    <script>
+      function mostrarHoras() {
+        let clock = document.querySelector("#relogio");
+        let now = new Date();
+        clock.textContent = now.toLocaleTimeString();
+      }
+      // Mostre a hora assim que carregar o script
+      mostrarHoras();
+      // Chame a função mostrarHoras a cada 1000ms (1 segundo)
+      setInterval(mostrarHoras, 1000);
+    </script>
+  </body>
+</html>
